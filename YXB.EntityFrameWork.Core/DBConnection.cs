@@ -13,12 +13,13 @@ using YXB.EntityFrameWork.Core.Map;
 
 namespace YXB.EntityFrameWork.Core
 {
-   [DbConfigurationType(typeof(EFConfiguration))]
+    [DbConfigurationType(typeof(EFConfiguration))]
+    //[DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class DBConnection:DbContext
     {
         public DBConnection() : base("name=EFConnection")
         {
-            //Database.SetInitializer(new DropCreateDatabaseAlways<DBConnection>());
+            Database.SetInitializer<DBConnection>(null);
             Configuration.AutoDetectChangesEnabled = true;
             Configuration.EnsureTransactionsForFunctionsAndCommands = true;
             Configuration.UseDatabaseNullSemantics = false;

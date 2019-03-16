@@ -25,6 +25,7 @@ namespace YXB.EntityFrameWork.Core.Configurations
             //执行策略
             SetExecutionStrategy("MySql.Data.MySqlClient", ()=>new BreakExecuteStrategy(_policy));
             DbInterception.Add(new EFDbInterceptor());
+      
         }
     }
 }

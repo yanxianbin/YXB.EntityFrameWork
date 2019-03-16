@@ -85,15 +85,13 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="Entity\BaseEntity.cs" />
     <Compile Include="DataEnum\SexEnum.cs" />
+    <Compile Include="Entity\SqlExecuteMonitor.cs" />
     <Compile Include="Entity\UserOrderInfo.cs" />
     <Compile Include="Map\EntityBaseMap.cs" />
+    <Compile Include="Map\SqlExecuteMonitorMap.cs" />
     <Compile Include="Map\UserinfoMap.cs" />
     <Compile Include="Entity\UserInfo.cs" />
     <Compile Include="Map\UserOrderInfoMap.cs" />
-    <Compile Include="Migrations\201903141624025_InitialCreate.cs" />
-    <Compile Include="Migrations\201903141624025_InitialCreate.Designer.cs">
-      <DependentUpon>201903141624025_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,11 +100,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903141624025_InitialCreate.resx">
-      <DependentUpon>201903141624025_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
